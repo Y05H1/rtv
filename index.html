@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css "rel="stylesheet">
+  <link href="./css/dashboard.css" rel="stylesheet">
+
+
+  <title>Dashboard</title>
+</head>
+<body>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Dashboard</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Redmine</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="col-md-1 sidebar">
+      <ul class="nav nav-sidebar">
+        <li class="active"><a href="./index.html"><i class="fa fa-folder-o" aria-hidden="true"></i> Overview</a></li>
+        <li><a href="./list.html"><i class="fa fa-sticky-note-o" aria-hidden="true"></i> List</a></li>
+        <li><a href="./chart.html"><i class="fa fa-area-chart" aria-hidden="true"></i> Chart</a></li>
+      </ul>
+    </div>
+    
+    <div class="col-md-offset-1 main">
+    <h1 class="page-header">Overview</h1>
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="sub-header">Roadmap</h2>
+        <table id="roadmap_table" class="table table-condensed table-hover">
+          <thead>
+            <tr><th>Name</th><th>Due date</th><th>Remaining ticktes</th><th>Ticket total</th><th>Status</th></tr>
+          </thead>
+          <tbody id="redmine_roadmap_status"></tbody>
+        </table>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="sub-header">Gantt</h2>
+        <div id="redmine_gantt"></div>
+      </div>
+    </div>
+
+
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.js"></script>
+  <script src="./js/data.js"></script>
+  <script src="./js/dashboard.js"></script>
+
+</body>
+</html>
